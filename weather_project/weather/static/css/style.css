@@ -1,0 +1,77 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    animation: gradientBackground 6s infinite alternate;
+    overflow: hidden;
+}
+
+/* Animation for background */
+@keyframes gradientBackground {
+    0% { background: linear-gradient(120deg, #89f7fe, #66a6ff); }
+    100% { background: linear-gradient(120deg, #ff9a9e, #fad0c4); }
+}
+
+/* Container for weather card */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    animation: slideIn 1s ease-out;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Form input and button */
+form input[type=\"text\"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #66a6ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #89f7fe;
+}
+
+/* Weather info card */
+.weather-info {
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Error message */
+.error {
+    color: red;
+    margin-top: 10px;
+}
