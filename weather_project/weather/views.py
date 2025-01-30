@@ -6,7 +6,7 @@ def weather_home(request):
     weather_data = {}
 
     if city:
-        api_key = 'Yb9d45f04544c7c68e2cc82050454e952'  # Replace with your OpenWeatherMap API Key
+        api_key = 'Put here yourapi'  # Replace with your OpenWeatherMap API Key
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
         response = requests.get(url)
         if response.status_code == 200:
